@@ -48,6 +48,6 @@ There should be no necessary libraries to run the code here beyond the Anaconda 
 3. Go to http://0.0.0.0:3001/ to view the web app
 
 ## Licensing, Authors, Acknowledgements
-* [Udacity](https://www.udacity.com/) for the course materials and script templates.
-* [Appen](https://www.appen.com) for providing dataset to train our model.
+* Credit to [Udacity](https://www.udacity.com/) for the course materials and script templates.
+* Credit to [Appen](https://www.appen.com) for providing the datasets used to create the model and visualisations.
 
