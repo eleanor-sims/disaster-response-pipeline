@@ -1,6 +1,5 @@
 # disaster-response-pipeline
 
-The README file includes a summary of the project, how to run the Python scripts and web app, and an explanation of the files in the repository. Comments are used effectively and each function has a docstring.
 
 # Disaster Response Pipeline Project (Udacity - Data Scientist Nanodegree Program)
 ## Table of Contents
@@ -18,6 +17,7 @@ Pre-labelled disaster messages are used to train a model that can categorize new
 The project also includes a web application where visualisations of the training data are displayed and new messages can be input and classified.
 
 ## File Descriptions
+The code for this project is organised as follows:
 ### Folder: app
 **run.py** - python script needed to run web app.<br/>
 Folder: templates - html files (go.html & master.html) required for the web app.
@@ -34,7 +34,7 @@ Folder: templates - html files (go.html & master.html) required for the web app.
 **ML Pipeline Preparation.ipynb** - Jupyter Notebook used for analysis and to prepare ML pipeline
 
 ## Installation
-There should be no extra library installations required in addition to those provided as part of the Anaconda distribution. There should be no issue in running the code using Python 3.7 and above.
+There should be no necessary libraries to run the code here beyond the Anaconda distribution of Python. The code should run with no issues using Python versions 3.
 
 ## Instructions
 1. Navigate to the project root directory and run the following commands to establish the database and model:
@@ -49,7 +49,7 @@ There should be no extra library installations required in addition to those pro
 
 3. Go to http://0.0.0.0:3001/ to view the web app
 
-## Acknowledgements
+## Licensing, Authors, Acknowledgements
 * [Udacity](https://www.udacity.com/) for the course materials and script templates.
 * [Appen](https://www.appen.com) for providing dataset to train our model.
 
