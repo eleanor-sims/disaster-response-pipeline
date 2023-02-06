@@ -1,7 +1,5 @@
 # disaster-response-pipeline
 
-
-# Disaster Response Pipeline Project (Udacity - Data Scientist Nanodegree Program)
 ## Table of Contents
 1. [Introduction](https://github.com/louisteo9/udacity-disaster-response-pipeline#introduction)
 2. [File Descriptions](https://github.com/louisteo9/udacity-disaster-response-pipeline#file-descriptions)
@@ -14,7 +12,7 @@ The Disaster Response Pipeline is part of the Udacity Data Scientist Nanodegree 
 
 Pre-labelled disaster messages are used to train a model that can categorize new messages received in real time during actual disasters, so that these can be sent to appropriate disaster response agencies.
 
-The project also includes a web application where visualisations of the training data are displayed and new messages can be input and classified.
+The project also includes a web application where visualisations of the training data are displayed and new messages can be input and classified based on the trained model.
 
 ## File Descriptions
 The code for this project is organised as follows:
