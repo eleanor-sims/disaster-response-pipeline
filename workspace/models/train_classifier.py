@@ -28,6 +28,12 @@ import pickle
 
 
 def load_data(database_filepath):
+    '''Function to load the data saved to the sql database in the process_data.py script
+
+        Input: sql filepath database_filepath
+        Returns: X - dataframe of messages
+                 y - dataframe of binary category responses
+                 category_names - list of category names in y'''
     engine = create_engine('sqlite:///DisasterResponse.db')
     conn = sqlite3.connect(database_filepath)
     df = pd.read_sql('SELECT * FROM df_clean', conn)
@@ -43,6 +49,11 @@ def load_data(database_filepath):
 
 
 def tokenize(text):
+    '''Function to tokenize text. Replaces any urls with "url placeholder"; Removes any punctuation;
+        Normalizes text; Tokenize text
+
+        Input: message formatted as string
+        Returns: tokenized text'''
     # define url regex to replace these with placeholder
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
 
@@ -69,6 +80,10 @@ def tokenize(text):
 
 
 def build_model():
+    '''Function to define pipeline needed for model build
+
+        Input: None
+        Returns: sklearn Pipeline object pipeline'''
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
@@ -79,16 +94,22 @@ def build_model():
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    '''Function to print out classification report
+
+        Inputs: pipeline object model; X_test, Y_test, category_names
+        Returns: prints sklearn classification report'''
     Y_pred = model.predict(X_test)
 
     print(classification_report(Y_test, Y_pred, target_names=category_names))
 
 
 def save_model(model, model_filepath):
+    '''Function to save model as pickle file'''
     pickle.dump(model, open(model_filepath, 'wb'))
 
 
 def main():
+    '''Function to run the main ML program'''
     if len(sys.argv) == 3:
         database_filepath, model_filepath = sys.argv[1:]
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))
